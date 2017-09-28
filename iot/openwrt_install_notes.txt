@@ -1,0 +1,31 @@
+# install packages via opkg
+opkg update
+opkg install libyaml python-pip
+
+# install more packages via pip
+pip install xmltodict pyyaml webpy
+
+# setup WebYAML
+
+# create a directory for WebYAML
+mkdir -p /opt/webyaml
+
+# move to the webyaml directory
+cd /opt/webyaml
+
+# download core
+git clone https://github.com/webyaml/core.git
+
+# download examples
+# git clone https://github.com/webyaml/sites.git
+
+# or make a empty sites directory
+mkidr -p /opt/webyaml/sites
+
+# download the 7688 package
+cd /opt/webyaml/sites/
+wget http://webyaml.com/static/7688-170927.tar.gz
+tar zxf 7688-170927.tar.gz
+
+# start the server on port 8080
+/opt/webyaml/sites/7688/app.py
