@@ -71,8 +71,9 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 CREATE TABLE IF NOT EXISTS `activity` (
-  `id` int(6) NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8 NOT NULL
+  `id` int(6) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) CHARACTER SET utf8 NOT NULL,
+  PRIMARY KEY (`id`)  
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -82,9 +83,10 @@ CREATE TABLE IF NOT EXISTS `activity` (
 --
 
 CREATE TABLE IF NOT EXISTS `customer` (
-  `id` int(6) NOT NULL,
+  `id` int(6) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `status` varchar(256) NOT NULL
+  `status` varchar(256) NOT NULL,
+  PRIMARY KEY (`id`)  
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -94,9 +96,10 @@ CREATE TABLE IF NOT EXISTS `customer` (
 --
 
 CREATE TABLE IF NOT EXISTS `project` (
-  `id` int(6) NOT NULL,
+  `id` int(6) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `status` varchar(255) CHARACTER SET utf8 NOT NULL
+  `status` varchar(255) CHARACTER SET utf8 NOT NULL,
+  PRIMARY KEY (`id`)  
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -106,7 +109,7 @@ CREATE TABLE IF NOT EXISTS `project` (
 --
 
 CREATE TABLE IF NOT EXISTS `task` (
-  `id` int(6) NOT NULL,
+  `id` int(6) NOT NULL AUTO_INCREMENT,
   `customer` int(6) NOT NULL,
   `project` int(6) NOT NULL,
   `activity` int(6) NOT NULL,
@@ -114,7 +117,8 @@ CREATE TABLE IF NOT EXISTS `task` (
   `first_start` datetime NOT NULL,
   `last_start` datetime NOT NULL,
   `seconds` int(10) NOT NULL DEFAULT '0',
-  `status` varchar(255) CHARACTER SET utf8 NOT NULL
+  `status` varchar(255) CHARACTER SET utf8 NOT NULL,
+  PRIMARY KEY (`id`)  
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -124,104 +128,14 @@ CREATE TABLE IF NOT EXISTS `task` (
 --
 
 CREATE TABLE IF NOT EXISTS `time` (
-  `id` int(6) NOT NULL,
+  `id` int(6) NOT NULL AUTO_INCREMENT,
   `task` int(6) NOT NULL,
   `start` datetime NOT NULL,
-  `end` datetime DEFAULT NULL
+  `end` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)  
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Indexes for dumped tables
---
 
---
--- Indexes for table `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `role`
---
-ALTER TABLE `role`
-  ADD PRIMARY KEY (`id`);
---
--- Indexes for table `group`
---
-ALTER TABLE `group`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `customer`
---
-ALTER TABLE `customer`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `project`
---
-ALTER TABLE `project`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `task`
---
-ALTER TABLE `task`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `time`
---
-ALTER TABLE `time`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `role`
---
-ALTER TABLE `role`
-  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT;
-  
---
--- AUTO_INCREMENT for table `user`
---
-ALTER TABLE `user`
-  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `group`
---
-ALTER TABLE `group`
-  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `activity`
---
-ALTER TABLE `activity`
-  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `customer`
---
-ALTER TABLE `customer`
-  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `project`
---
-ALTER TABLE `project`
-  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `task`
---
-ALTER TABLE `task`
-  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `time`
---
-ALTER TABLE `time`
-  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
