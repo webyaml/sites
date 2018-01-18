@@ -37,7 +37,7 @@ to this:
 	
 After making this change you can reach the private area without a
 username and password.  Start by accessing the dashboard at a url
-like this one: http://<domain or ip address>/dashboard
+like this one: http://<domain or ip address>:<port>/admin/dashboard
 
 Look for the Managment menu in the header and create a group and role.
 After creating at least one group and one role you can create a user.
