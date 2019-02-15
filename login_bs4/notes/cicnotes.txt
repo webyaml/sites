@@ -1,0 +1,87 @@
+jan - 1 120 400 392
+f45dr3
+
+CICC\jan
+61Sunset!
+
+
+Server:
+
+Name: CIC-FS1
+
+TeamViewer id: 1 128 577 130
+
+PW: Rosemary1!
+
+
+catadmin@
+
+btcadmin@
+
+
+Rosemary1!
+
+
+Administration
+Mangement
+User
+
+
+Inventory
+Bakery
+
+
+
+
+
+
+
+user goes to app 
+
+	when the user logs in they get pushed to the correct app based on role.
+	
+	higher roles can switch views 
+	
+	
+	
+root
+
+	redirects to login page
+	
+	
+login
+
+	redirects to main menu
+	
+main menu
+
+	Check In Inventory
+	Check Out Inventory
+	Setup
+	Administration
+	Logout
+	
+	
+	Each menu item is a card
+	the cards will contain:
+		headline
+		blub
+		button
+	the whole card will be an a tag
+	
+	
+	
+	
+
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
