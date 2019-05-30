@@ -113,6 +113,7 @@ CREATE TABLE IF NOT EXISTS `task` (
   `customer` int(6) NOT NULL,
   `project` int(6) NOT NULL,
   `activity` int(6) NOT NULL,
+  `note` text NOT NULL,
   `user` int(6) NOT NULL,
   `first_start` datetime NOT NULL,
   `last_start` datetime NOT NULL,
