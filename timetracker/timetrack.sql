@@ -113,7 +113,6 @@ CREATE TABLE IF NOT EXISTS `task` (
   `customer` int(6) NOT NULL,
   `project` int(6) NOT NULL,
   `activity` int(6) NOT NULL,
-  `note` text NOT NULL,
   `user` int(6) NOT NULL,
   `first_start` datetime NOT NULL,
   `last_start` datetime NOT NULL,
@@ -133,6 +132,7 @@ CREATE TABLE IF NOT EXISTS `time` (
   `task` int(6) NOT NULL,
   `start` datetime NOT NULL,
   `end` datetime DEFAULT NULL,
+  `note` text NOT NULL,  
   PRIMARY KEY (`id`)  
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
